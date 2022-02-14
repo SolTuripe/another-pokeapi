@@ -1,8 +1,11 @@
 import { useEffect, useState } from "react";
+import PokeCard from "./components/PokeCard";
 
 const App = () => {
   const [allPokemons, setAllPokemons] = useState([]);
-  const [loadMore, setLoadMore] = useState("https://pokeapi.co/api/v2/pokemon");
+  const [loadMore, setLoadMore] = useState(
+    "https://pokeapi.co/api/v2/pokemon?limit=20"
+  );
 
   const getAllPokemons = async () => {
     const res = await fetch(loadMore);
@@ -32,7 +35,15 @@ const App = () => {
     <div className="app-container">
       <h1>PokeApi</h1>
       <div className="pokemon-container">
-        <div className="all-container"></div>
+        <div className="all-container">
+          {allPokemons.map((pokemon, index) => (
+            <PokeCard
+              name={pokemon.name}
+              image={pokemon.sprites.other.dream_world.front_default}
+              key={index}
+            />
+          ))}
+        </div>
         <button className="load-more">More Pokemons</button>
       </div>
     </div>
