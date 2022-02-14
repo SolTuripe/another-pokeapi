@@ -1,4 +1,4 @@
-# PokeApi 🌟
+# PokeApi 👾
 
 JavaScript application that shows a list of pokemons. \
 I used React as framework. \
@@ -12,7 +12,7 @@ cd another-pokeapi
 npm install
 ```
 
-## In the project directory, you can run ✅
+## In the project directory, you can run: ✔
 
 ### `npm start`
 
