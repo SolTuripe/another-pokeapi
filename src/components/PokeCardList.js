@@ -1,25 +1,22 @@
 import { React, useEffect, useState } from "react";
 import axios from "axios";
+import apiServer from "../Globlal";
 import PokeCard from "./PokeCard";
 
 const PokeCardList = () => {
   const [allPokemons, setAllPokemons] = useState([]);
-  const [loadMore, setLoadMore] = useState(
-    "https://pokeapi.co/api/v2/pokemon?limit=20"
-  );
+  const [loadMore, setLoadMore] = useState(apiServer);
 
   const getAllPokemons = async () => {
-    const res = await fetch(loadMore);
-    const { results, next } = await res.json();
-
-    console.log(results);
+    const res = await axios.get(loadMore);
+    const { next, results } = res.data;
 
     const urls = results.map(({ url }) => url);
 
     const pokemons = await Promise.all(
       urls.map(async (url) => {
-        const res = await fetch(url);
-        return res.json();
+        const res = await axios.get(url);
+        return res.data;
       })
     );
 
