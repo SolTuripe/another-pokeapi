@@ -1,4 +1,5 @@
 import { React, useEffect, useState } from "react";
+import axios from "axios";
 import PokeCard from "./PokeCard";
 
 const PokeCardList = () => {
@@ -9,22 +10,21 @@ const PokeCardList = () => {
 
   const getAllPokemons = async () => {
     const res = await fetch(loadMore);
-    const data = await res.json();
+    const { results, next } = await res.json();
 
-    setLoadMore(data.next);
+    console.log(results);
 
-    function createPokemonObject(result) {
-      result.forEach(async (pokemon) => {
-        const res = await fetch(
-          `https://pokeapi.co/api/v2/pokemon/${pokemon.name}`
-        );
-        const data = await res.json();
-        setAllPokemons((currentList) => [...currentList, data]);
-      });
-    }
+    const urls = results.map(({ url }) => url);
 
-    createPokemonObject(data.results);
-    await console.log(allPokemons);
+    const pokemons = await Promise.all(
+      urls.map(async (url) => {
+        const res = await fetch(url);
+        return res.json();
+      })
+    );
+
+    setLoadMore(next);
+    setAllPokemons(allPokemons.concat(pokemons));
   };
 
   useEffect(() => {
