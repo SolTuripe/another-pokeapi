@@ -1,4 +1,5 @@
 import React from "react";
+import "./PokeCard.css";
 
 const PokeCard = ({ name, image }) => {
   return (

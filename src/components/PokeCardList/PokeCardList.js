@@ -1,7 +1,8 @@
 import { React, useEffect, useState } from "react";
 import axios from "axios";
-import apiServer from "../Globlal";
-import PokeCard from "./PokeCard";
+import apiServer from "../../Globlal";
+import PokeCard from "../PokeCard/PokeCard";
+import "./PokeCardList.css";
 
 const PokeCardList = () => {
   const [allPokemons, setAllPokemons] = useState([]);

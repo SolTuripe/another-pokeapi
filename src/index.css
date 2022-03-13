@@ -29,78 +29,23 @@ code {
 
 .app-container h1 {
   font-family: Pokemon solid;
-  font-size: 40px;
+  font-size: 47px;
   -webkit-text-fill-color: 5px black;
   -webkit-text-stroke: 0.3px rgb(233, 223, 231);
 }
 
-.pokemon-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 50px;
-}
-
-.all-container {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-}
-
-.card-container {
-  background-color: white;
-  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 1.5rem 0;
-  margin: 0.3rem;
-  border: 3px solid #945a96;
-  border-radius: 1rem;
-  min-width: 160px;
-  text-align: center;
-}
-
-h3 {
-  margin-bottom: 0.2rem;
-}
-
-.card-container img {
-  width: 120px;
-  height: 120px;
-}
-
-.detail-wrapper {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-}
-
-.detail-wrapper button {
-  color: rgb(22, 22, 22);
-  padding: 0.5rem;
-  margin-top: 1rem;
-  border: none;
-  border-radius: 0.2rem;
-  cursor: pointer;
-  background-color: rgba(0, 0, 0, 0.185);
-}
-
-.load-more {
-  background: #f5f5f5 linear-gradient(#f5f5f5, #f1f1f1) repeat-x;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+.find-more {
+  background: white;
   border-radius: 6px;
   border: 3px solid #945a96;
-  color: rgb(15, 15, 15);
   padding: 0.5rem 1.5rem;
   min-width: 10%;
-  margin-top: 2rem;
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: center;
 }
 
-.load-more:hover {
-  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+.input {
+  border: 0;
+  width: 100px;
 }
