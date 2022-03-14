@@ -31,8 +31,8 @@ code {
 .app-container h1 {
   font-family: Pokemon solid;
   font-size: 47px;
-  -webkit-text-fill-color: 5px black;
-  -webkit-text-stroke: 0.3px rgb(233, 223, 231);
+  color: white;
+  -webkit-text-stroke: 0.3px rgb(64, 19, 85);
 }
 
 .find-more {
@@ -54,6 +54,7 @@ code {
 .search {
   display: flex;
   justify-content: center;
+  flex-direction: column;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 25px;
 }
@@ -77,6 +78,7 @@ code {
 }
 
 .title button {
+  font-family: Arial, Helvetica, sans-serif;
   width: 180px;
   height: 60px;
   margin: 20px;
@@ -85,9 +87,26 @@ code {
   padding-left: 10px;
   border: none;
   color: white;
-  background-color: rgb(255, 192, 234);
+  background-color: rgb(238, 156, 211);
 }
 
 .title button:hover {
   cursor: pointer;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.display {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+}
+
+.display h4,
+h3 {
+  margin: 5px;
+}
+
+.display img {
+  width: 200px;
 }

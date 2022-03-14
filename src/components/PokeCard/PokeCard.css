@@ -11,6 +11,7 @@
   border-radius: 1rem;
   min-width: 160px;
   text-align: center;
+  color: rgb(133, 127, 127);
 }
 
 h3 {
@@ -29,7 +30,7 @@ h3 {
 }
 
 .detail-wrapper button {
-  color: rgb(22, 22, 22);
+  color: rgb(71, 69, 69);
   padding: 0.5rem;
   margin-top: 1rem;
   border: none;
