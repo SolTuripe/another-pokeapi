@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
-import PokeCardList from "../components/PokeCardList/PokeCardList";
+import "./Home.css";
+import PokeCardList from "../../components/PokeCardList/PokeCardList.js";
 
 const Home = () => {
   return (

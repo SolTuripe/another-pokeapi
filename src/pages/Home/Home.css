@@ -1,21 +1,21 @@
-.pokemon-container {
+.app-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-bottom: 50px;
+  min-height: 100vh;
 }
 
-.all-container {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
+.app-container h1 {
+  font-family: Pokemon solid;
+  font-size: 48px;
+  color: white;
+  -webkit-text-stroke: 0.3px rgb(64, 19, 85);
 }
 
-.load-more {
+.find-more {
   font-family: Arial, Helvetica, sans-serif;
-  width: 200px;
+  width: 220px;
   height: 60px;
   margin: 20px;
   border-radius: 10px;
@@ -24,10 +24,10 @@
   border: none;
   color: white;
   background-color: rgb(238, 156, 211);
-  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
-.load-more:hover {
+.find-more:hover {
   cursor: pointer;
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }

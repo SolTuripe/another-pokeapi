@@ -1,6 +1,6 @@
 import { Routes, Route } from "react-router-dom";
-import Home from "./pages/Home";
-import Find from "./pages/Find";
+import Home from "./pages/Home/Home";
+import Find from "./pages/Find/Find";
 import Layout from "./components/Layaut";
 
 function App() {
