@@ -1,7 +1,7 @@
-import axios from "axios";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import "./Find.css";
+import api from "../../Global";
+import "./find.css";
 
 const Find = () => {
   const [pokemonName, setPokemonName] = useState("");
@@ -15,21 +15,23 @@ const Find = () => {
     defense: "",
     type: "",
   });
-  const searchPokemon = () => {
-    axios
-      .get(`https://pokeapi.co/api/v2/pokemon/${pokemonName}`)
-      .then((resp) => {
-        setPoke({
-          name: pokemonName,
-          species: resp.data.species.name,
-          img: resp.data.sprites.other.dream_world.front_default,
-          hp: resp.data.stats[0].base_stat,
-          attack: resp.data.stats[1].base_stat,
-          defense: resp.data.stats[2].base_stat,
-          type: resp.data.types[0].type.name,
-        });
-        setPokemonChosen(true);
-      });
+
+  const searchPokemon = async () => {
+    const { species, sprites, stats, types } = await api.getPokemonByName(
+      pokemonName.toLocaleLowerCase()
+    );
+
+    setPoke({
+      name: pokemonName,
+      species: species.name,
+      img: sprites.other.dream_world.front_default,
+      hp: stats[0].base_stat,
+      attack: stats[1].base_stat,
+      defense: stats[2].base_stat,
+      type: types[0].type.name,
+    });
+
+    setPokemonChosen(true);
   };
 
   return (
