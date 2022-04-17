@@ -1,6 +1,6 @@
 /* eslint-disable testing-library/prefer-screen-queries */
 import React from "react";
-import { render, screen } from "@testing-library/react";
+import { render } from "@testing-library/react";
 import PokeCardList from "./PokeCardList";
 import api from "../../Global";
 
@@ -18,9 +18,7 @@ test("render PokeCardList with all items", async () => {
   const { findAllByTestId } = render(<PokeCardList />);
 
   const cards = await findAllByTestId("pokecard");
-  // console.log(cards[0]);
-
-  const sut = screen.getByText(/pikachu/s);
+  console.log(cards[0]);
 
   expect(cards.length).toBe(mockedResponse.length);
 });
