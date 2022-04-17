@@ -12,6 +12,12 @@ cd another-pokeapi
 npm install
 ```
 
+## Demo of the proyect 🎥
+
+<p align="center">
+<img src="./src/assets/img/pokeapi.gif" width=65%>
+</p>
+
 ## In the project directory, you can run: ✔
 
 ### `npm start`
@@ -26,12 +32,6 @@ You may also see any lint errors in the console.
 
 Launches the test runner in the interactive watch mode.\
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-## Page View 📷
-
-<p align="center">
-<img src="./src/assets/img/pokeapi.jpg" width=65%>
-</p>
 
 ## Learn More 📚
 
