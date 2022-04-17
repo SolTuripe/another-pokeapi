@@ -1,7 +1,7 @@
 # PokeApi 👾
 
-JavaScript application that shows a list of pokemons. \
-I used React as framework. \
+JavaScript application that shows a list of pokemons \
+I used React as framework \
 Data pulled from: [This endPoint](https://pokeapi.co/api/v2/pokemon)
 
 ## Project Setup 📌
